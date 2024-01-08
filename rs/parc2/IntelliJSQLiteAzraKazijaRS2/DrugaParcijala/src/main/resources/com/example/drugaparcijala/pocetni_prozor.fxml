@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.geometry.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.drugaparcijala.controllers.PocetniProzorController">
+
+    <top>
+        <MenuBar>
+            <menus>
+                <Menu text="Nekretnine">
+                    <items>
+                        <MenuItem text="Dodaj novu" onAction="#dodajNekretninu" />
+                        <MenuItem text="Aktivne nekretnine" onAction="#prikaziAktivneNekretnine" />
+                        <MenuItem text="Prodate nekretnine" onAction="#prikaziProdateNekretnine" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+    </top>
+
+    <center>
+        <TableView fx:id="nekretnineTableView" prefWidth="500">
+            <columns>
+                <TableColumn fx:id="datumDodavanjaColumn" text="Datum dodavanja"
+                             prefWidth="100">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="datumDodavanja" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="jedinstveniBrojColumn" text="Jedinstveni broj"
+                             prefWidth="100">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="jedinstveniBroj" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="adresaColumn" text="Adresa" prefWidth="100">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="adresa" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="cijenaColumn" text="Cijena" prefWidth="100">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="cijena" />
+                    </cellValueFactory>
+                </TableColumn>
+            </columns>
+        </TableView>
+    </center>
+
+    <bottom>
+        <HBox alignment="CENTER" spacing="10" padding="10">
+            <Button text="Dodaj nekretninu" onAction="#dodajNekretninu" />
+        </HBox>
+    </bottom>
+
+</BorderPane>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<GridPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+          fx:controller="com.example.drugaparcijala.controllers.DodavanjeNekretnineController"
+          alignment="CENTER" hgap="10" vgap="10" padding="10">
+
+    <Label text="Jedinstveni broj:" />
+    <TextField fx:id="jedinstveniBrojTextField" />
+
+    <Label text="Adresa:" />
+    <TextField fx:id="adresaTextField" />
+
+    <Label text="Grad:" />
+    <TextField fx:id="gradTextField" />
+
+    <Label text="Cijena:" />
+    <TextField fx:id="cijenaTextField" />
+
+    <Label text="Datum prodaje:" />
+    <DatePicker fx:id="datumProdajeDatePicker" />
+
+    <Label text="Cijena prodaje:" />
+    <TextField fx:id="cijenaProdajeTextField" />
+
+    <Label text="Komentar:" GridPane.rowIndex="6" />
+    <TextArea fx:id="komentarTextArea" GridPane.rowIndex="6" />
+
+    <Label text="Nekretnina se i dalje prodaje:" GridPane.rowIndex="7" />
+    <CheckBox fx:id="nekretninaSeIProdajeCheckBox" GridPane.rowIndex="7" />
+
+    <HBox alignment="CENTER" spacing="10" GridPane.rowIndex="8">
+        <Button text="Spremi" onAction="#spremiNekretninu" />
+        <Button text="Zatvori" onAction="#zatvoriProzor" />
+    </HBox>
+
+</GridPane>
